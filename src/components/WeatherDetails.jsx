@@ -2,6 +2,9 @@ export function WeatherDetails({ data }) {
   return (
     <div className="details">
       <div>
+        <span>{data.is_day ? "☀️ Dia" : "🌑 Noite"}</span>
+      </div>
+      <div>
         <span>Sensação</span>
         <span>{Math.round(data.apparent_temperature)}°C</span>
       </div>
