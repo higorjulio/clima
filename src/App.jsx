@@ -9,9 +9,10 @@ function App() {
   return (
     <div>
       <header>
-      <div className="header-logo">Clima</div>
+      <div className="header-logo" onClick={() => {window.location.href = "/"}}>Clima</div>
       <SearchBar onSearch={fetchWeather} />
       </header>
+      {!loading && !weather && <h1>As informações sobre a cidade aparecerão aqui</h1>}
       {loading && <p>Carregando...</p>}
       {error && <p className="error">{error}</p>}
       {weather && <WeatherCard data={weather} />}
